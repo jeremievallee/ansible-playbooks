@@ -1,0 +1,31 @@
+---
+
+- name: Create Movies folder
+  sudo: yes
+  file:
+    path: "{{ initialise_plex_media.path }}/Movies"
+    owner: "{{ initialise_plex_media.owner }}"
+    group: "{{ initialise_plex_media.group }}"
+    state: directory
+    recurse: yes
+    mode: 0777
+
+- name: Create TVShows folder
+  sudo: yes
+  file:
+    path: "{{ initialise_plex_media.path }}/TVShows"
+    owner: "{{ initialise_plex_media.owner }}"
+    group: "{{ initialise_plex_media.group }}"
+    state: directory
+    recurse: yes
+    mode: 0777
+
+- name: Create Music folder
+  sudo: yes
+  file:
+    path: "{{ initialise_plex_media.path }}/Music"
+    owner: "{{ initialise_plex_media.owner }}"
+    group: "{{ initialise_plex_media.group }}"
+    state: directory
+    recurse: yes
+    mode: 0777

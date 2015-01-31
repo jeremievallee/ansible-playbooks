@@ -1,0 +1,6 @@
+---
+
+initialise_plex_media:
+  path: "{{ initialise_plex_media_vars.path }}"
+  owner: "{{ initialise_plex_media_vars.owner }}"
+  group: "{{ initialise_plex_media_vars.group }}"

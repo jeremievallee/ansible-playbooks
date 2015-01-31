@@ -24,7 +24,9 @@
   file:
     path: "/home/{{ transmission.user }}/downloads"
     owner: "{{ transmission.user }}"
+    group: "{{ transmission.user }}"
     state: directory
+    recurse: yes
     mode: 0777
 
 - name: Create incomplete folder
@@ -32,7 +34,9 @@
   file:
     path: "/home/{{ transmission.user }}/downloads/incomplete"
     owner: "{{ transmission.user }}"
+    group: "{{ transmission.user }}"
     state: directory
+    recurse: yes
     mode: 0777
 
 - name: Copy config file
