@@ -1,0 +1,4 @@
+---
+
+plex_media_server:
+  url: "{{ plex_url }}"

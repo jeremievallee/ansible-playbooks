@@ -1,0 +1,11 @@
+---
+
+- name: download Plex Media Server 
+  get_url:
+    url: "{{ plex_media_server.download_url }}"
+    dest: "/tmp/plex_install.deb"
+
+- name: Install Plex Media Server
+  apt:
+    deb: "/tmp/plex_install.deb"
+    state: present
