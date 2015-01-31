@@ -33,10 +33,10 @@
   sudo: yes
   template:
     src: "settings.j2"
-    dest: "/etc/transmission-deamon/settings.json"
+    dest: "/etc/transmission-daemon/settings.json"
 
 - name: Restart Transmission
   sudo: yes
   service:
-    name: "transmission-deamon"
+    name: "transmission-daemon"
     state: "restarted"
