@@ -3,29 +3,29 @@
 - name: Download Transmission
   sudo: yes
   apt:
-    name: "transmission-deamon"
+    name: "transmission-daemon"
     state: present
 
 - name: Create the Transmission User
   sudo: yes
   user:
-    name: "{{ transmission_user.name }}"
-    password: "{{ transmission_user.password }}"
+    name: "{{ transmission.user }}"
+    password: "{{ transmission.password }}"
     state: present
 
 - name: Create Dowloads folder
   sudo: yes
   file:
-    path: "/home/{{ transmission_user.name }}/downloads"
-    owner: "{{ transmission_user.name }}"
+    path: "/home/{{ transmission.user }}/downloads"
+    owner: "{{ transmission.user }}"
     state: directory
     mode: 0777
 
 - name: Create incomplete folder
   sudo: yes
   file:
-    path: "/home/{{ transmission_user.name }}/downloads/incomplete"
-    owner: "{{ transmission_user.name }}"
+    path: "/home/{{ transmission.user }}/downloads/incomplete"
+    owner: "{{ transmission.user }}"
     state: directory
     mode: 0777
 
