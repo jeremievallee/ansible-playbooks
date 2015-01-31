@@ -2,3 +2,4 @@
   gather_facts: False
   roles:
     - transmission-install
+    - plex-media-server-install
