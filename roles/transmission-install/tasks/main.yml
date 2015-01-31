@@ -6,6 +6,12 @@
     name: "transmission-daemon"
     state: present
 
+- name: Restart Transmission
+  sudo: yes
+  service:
+    name: "transmission-daemon"
+    state: "stopped"
+
 - name: Create the Transmission User
   sudo: yes
   user:
