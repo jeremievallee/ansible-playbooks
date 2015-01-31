@@ -1,4 +1,4 @@
 ---
 
 plex_media_server:
-  url: "{{ plex_url }}"
+  download_url: "{{ plex_url }}"
