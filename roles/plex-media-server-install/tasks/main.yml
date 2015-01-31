@@ -1,5 +1,11 @@
 ---
 
+- name: Download avahi-daemon
+  sudo: yes
+  apt:
+    name: "avahi-daemon"
+    state: present
+
 - name: download Plex Media Server 
   get_url:
     url: "{{ plex_media_server.download_url }}"
