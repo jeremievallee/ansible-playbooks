@@ -4,4 +4,4 @@ transmission:
   user:          "downloader"
   password:      ""
   web_user:      ""
-  web_password:  ""
+  web_password:  "{{ web_password }}"
